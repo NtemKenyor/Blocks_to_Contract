@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="Icons/smart_contract_icon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/dashboard.css">
+    <title>Smart Contract Dashboard</title>
+</head>
+
+<body>
+    <!-- Navigation Bar (Similar to index.html) -->
+    <nav>
+        <div class="logo">
+            <img src="icons/logo.svg" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#">Dashboard</a></li>
+        </ul>
+    </nav>
+
+    <!-- Dashboard Interface -->
+    <section class="dashboard">
+        <div class="blockbar">
+            <!-- Sidebar content (blocks) goes here -->
+                <!-- Example of a block element with a resize handle -->
+                <div class="block" draggable="true">
+                    Sol Start Block
+                </div>
+                <div class="block" draggable="true">
+                    <span class="label" contenteditable="false">Transfer Funds</span>
+                    <!-- Block content goes here -->
+                    <div class="resize-handle"></div>
+                </div>
+
+                <!-- Example of a comment element with a resize handle -->
+                <div class="comment" draggable="true">
+                    <span class="label" contenteditable="false">Comment Label</span>
+                    <!-- Comment content goes here -->
+                    <div class="resize-handle"></div>
+                </div>
+        </div>
+
+        <div class="environ_dash">
+            <div class="canvas-container">
+                <div class="canvas-drawing-area">
+                    <!-- Canvas for dropping and arranging blocks -->
+                    <strong> Drag any of the blocks above into this section. </strong>
+                </div>
+            </div>
+            <div class="connections">
+                <canvas class="connections-canvas"></canvas>
+            </div>
+
+            <!-- <div class="canvas-container" >
+                <div class="canvas" >
+
+                </div>
+            </div>
+    
+            <div class="connections">
+                <canvas id="canvas"></canvas>
+            </div> -->
+
+        </div>
+
+        <br/>
+        <br/>
+        
+
+        <div class="rust-code">
+            <h2>Generated Rust Code:</h2>
+            <pre></pre>
+        </div>
+
+        <br/>
+
+        <div class="bottom_menu">
+            <button class="testnet-button">Launch on Testnet</button>
+            <button class="mainnet-button">Launch on Mainnet</button>
+
+            <div class="error-message">
+                <p class="error-text"></p>
+            </div>
+
+            <!-- Clear button-->
+            <button class="clear-button">Clear</button>
+
+
+            <!-- EXport button to convert your Blocks into Rust code -->
+            <button class="export-button">Export Rust Code</button>
+
+
+            <!-- Import Rust Code back into the Project. Rust to Blocks -->
+            <input type="file" id="import-file" accept=".rs" />
+            <button class="import-button">Import Rust Code</button>
+
+            <!-- A save button to locally store the project -->
+            <button class="save-button">Save</button>
+
+            <!-- Export canvas settings -->
+            <button class="export-button">Export Canvas</button>
+
+
+            <!-- Import Canvas settings -->
+            <button class="import-button">Import Canvas</button>
+            <input type="file" class="file-input" accept=".json" style="display: none">
+
+            <!-- Save and Load the projects -->
+            <button class="save-button">Save Project</button>
+            <button class="load-button">Load Project</button>
+
+
+            <!-- Export Project -->
+            <button class="export-button">Export Project</button>
+
+            <!-- import the Project -->
+            <input type="file" class="import-input" accept=".json" style="display: none">
+            <button class="import-button">Import Project</button>
+
+            <!--Controlling the zoom-in and the zoom-out -->
+            <button class="zoom-in-button">Zoom In</button>
+            <button class="zoom-out-button">Zoom Out</button>
+
+            <!-- Delete section -->
+            <button class="delete-button">Delete Selected</button>
+
+
+            <!-- Customs color for the users... -->
+            <label for="color-picker">Custom Color:</label>
+            <input type="color" id="color-picker" class="color-picker">
+
+            <label for="label-input">Custom Label:</label>
+            <input type="text" id="label-input" class="label-input">
+
+            <button class="apply-button">Apply Styles</button>
+
+
+            <!-- Duplicate selected... -->
+            <button class="duplicate-button">Duplicate Selected</button>
+
+            <!-- Making Users control the Input and Output points... -->
+            <button class="add-input-button">Add Input</button>
+            <button class="add-output-button">Add Output</button>
+
+
+        </div>
+
+    </section>
+
+  <!--   <div class="block">
+        <span class="label" contenteditable="false">Block Label</span>
+    </div>
+
+    <div class="comment">
+        <span class="label" contenteditable="false">Comment Label</span>
+    </div>
+ -->
+
+
+    
+
+
+
+    <!-- <section class="dashboard">
+        <div class="sidebar">
+            <div class="block">Drag Me</div>
+        </div>
+        <div class="canvas">
+        </div>
+    </section>
+ -->
+    <!-- Footer (Similar to index.html) -->
+    <footer>
+        <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+    </footer>
+
+    <script src="javascript/dashboard.js"></script>
+</body>
+
+</html>
